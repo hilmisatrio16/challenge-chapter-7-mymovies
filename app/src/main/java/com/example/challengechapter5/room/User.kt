@@ -1,7 +1,3 @@
-@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
-    "unused", "unused", "unused", "unused"
-)
-
 package com.example.challengechapter5.room
 
 import androidx.room.Entity
