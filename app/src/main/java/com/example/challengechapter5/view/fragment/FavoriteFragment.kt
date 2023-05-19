@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.*
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.challengechapter5.R
 import com.example.challengechapter5.databinding.FragmentFavoriteBinding
 import com.example.challengechapter5.dsprefs.DataStoreUser
 import com.example.challengechapter5.room.FilmFavorite
@@ -63,6 +65,13 @@ class FavoriteFragment : Fragment() {
                 }
             }
 
+        }
+
+        favoriteAdapter.onClickItemFilmFavorite = {
+            val bundleIdFilm = Bundle().apply {
+                putInt("movieid", it.idFilm)
+            }
+            findNavController().navigate(R.id.action_favoriteFragment_to_detailFragment, bundleIdFilm)
         }
 
         favoriteAdapter.onClickRemoveFavorit = {

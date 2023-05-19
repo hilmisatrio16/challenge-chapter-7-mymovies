@@ -15,6 +15,8 @@ import com.example.challengechapter5.databinding.FragmentRegisterBinding
 import com.example.challengechapter5.room.User
 import com.example.challengechapter5.viewmodel.UserViewModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
@@ -54,6 +56,7 @@ class RegisterFragment : Fragment() {
 
     }
 
+    @SuppressLint("All")
     private fun registerAccount() {
         val username = binding.inputUsername.text.toString()
         val email = binding.inputEmail.text.toString()
@@ -71,7 +74,24 @@ class RegisterFragment : Fragment() {
                         Toast.makeText(context, R.string.register_success, Toast.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                     }else{
-                        Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        when (it.exception) {
+                            is FirebaseAuthInvalidCredentialsException -> {
+                                when (it.exception) {
+                                    is FirebaseAuthInvalidCredentialsException -> {
+                                        Toast.makeText(context, "email not valid", Toast.LENGTH_SHORT).show()
+                                    }
+                                    else -> {
+                                        Toast.makeText(context, "email not valid & the password is weak or doesn't the requirements", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                            }
+                            is FirebaseAuthUserCollisionException -> {
+                                Toast.makeText(context, "The email is already in use by another user", Toast.LENGTH_SHORT).show()
+                            }
+                            else -> {
+                                Toast.makeText(context, "Register failed", Toast.LENGTH_SHORT).show()
+                            }
+                        }
                     }
                 }
             }else{

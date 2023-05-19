@@ -15,6 +15,7 @@ import com.example.challengechapter5.R
 import com.example.challengechapter5.databinding.FragmentLoginBinding
 import com.example.challengechapter5.dsprefs.DataStoreUser
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -88,7 +89,17 @@ class LoginFragment : Fragment() {
 
                         findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     }else{
-                        Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        if(it.exception is FirebaseAuthInvalidUserException){
+                            when((it.exception as FirebaseAuthInvalidUserException).errorCode){
+                                "ERROR_USER_NOT_FOUND" -> Toast.makeText(context,"user not found", Toast.LENGTH_SHORT).show()
+                                "ERROR_USER_DISABLED" -> Toast.makeText(context, "user has been disabled", Toast.LENGTH_SHORT).show()
+                                "ERROR_INVALID_USER_TOKEN" -> Toast.makeText(context, "user has been disabled", Toast.LENGTH_SHORT).show()
+                                else -> Toast.makeText(context, "email or password is failed", Toast.LENGTH_SHORT).show()
+                            }
+                        }else{
+                            Toast.makeText(context, "Login failed", Toast.LENGTH_SHORT).show()
+                        }
+                        //Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
         }else{

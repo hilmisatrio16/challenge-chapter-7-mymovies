@@ -12,6 +12,7 @@ import com.example.challengechapter5.room.FilmFavorite
 class FilmFavoriteAdapter(private var listFilmFavorite : List<FilmFavorite>) : RecyclerView.Adapter<FilmFavoriteAdapter.ViewHolder>() {
 
     var onClickRemoveFavorit : ((FilmFavorite)->Unit)? = null
+    var onClickItemFilmFavorite : ((FilmFavorite)->Unit)? = null
 
     class ViewHolder(var binding : ItemFilmFavoriteBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindFilmFavorite(itemFilmFavorite : FilmFavorite){
@@ -37,6 +38,9 @@ class FilmFavoriteAdapter(private var listFilmFavorite : List<FilmFavorite>) : R
 
         holder.binding.tvRemoveFilmFavorite.setOnClickListener {
             onClickRemoveFavorit?.invoke(listFilmFavorite[position])
+        }
+        holder.binding.itemFilm.setOnClickListener {
+            onClickItemFilmFavorite?.invoke(listFilmFavorite[position])
         }
     }
 
