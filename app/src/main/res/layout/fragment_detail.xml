@@ -210,6 +210,61 @@
                     android:textColor="@color/black"
                     android:textAlignment="textStart"
                     />
+                <!--                comment-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/etComment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="comments max 45 word"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:minWidth="48dp"
+                            android:importantForAutofill="no"
+                            android:fontFamily="@font/poppins_regular"
+                            android:maxLength="45"
+                            android:textSize="14sp"
+                            android:background="@drawable/background_grid_comment"
+                            tools:ignore="VisualLintTextFieldSize"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/btnSend"/>
+
+                        <ImageButton
+                            android:id="@+id/btnSend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/gray"
+                            android:contentDescription="send button"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            android:src="@drawable/send_two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/dark_green_blue"
+                            tools:ignore="RedundantDescriptionCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="12dp"
+                        tools:listitem="@layout/item_comment"/>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

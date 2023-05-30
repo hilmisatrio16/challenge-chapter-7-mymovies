@@ -10,7 +10,9 @@ import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.challengechapter5.BuildConfig
 import com.example.challengechapter5.R
 import com.example.challengechapter5.view.adapter.FilmAdapter
 import com.example.challengechapter5.databinding.FragmentHomeBinding
@@ -21,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@Suppress("KotlinConstantConditions")
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
@@ -52,7 +55,14 @@ class HomeFragment : Fragment() {
         //data store
         dataStoreUser = DataStoreUser.getInstance(requireContext().applicationContext)
 
-        binding.rvFilm.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        if(BuildConfig.FLAVOR == "mymoviesfree"){
+
+            binding.rvFilm.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
+        }else {
+            binding.rvFilm.layoutManager = GridLayoutManager(context, 2)
+        }
+
         binding.rvFilm.adapter = filmAdapter
 
         filmViewModel.callApiFilmPopular()
@@ -104,7 +114,9 @@ class HomeFragment : Fragment() {
         }
 
         userViewModel.getDataUserProfile().observe(viewLifecycleOwner) {
-            binding.username = it.username
+            if(it != null){
+                binding.username = it.username
+            }
         }
 
     }
@@ -128,6 +140,7 @@ class HomeFragment : Fragment() {
             popUp.show()
         }
     }
+
     companion object{
         const val MOVIE_ID = "movieid"
     }

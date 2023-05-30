@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Challenge Chapter 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="background_wave" translatable="false">background_wave</string>
+    <string name="img_login" translatable="false">img login</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="lorem_ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="overview" translatable="false">Overview</string>
+    <string name="password_not_match" translatable="false">password not match</string>
+    <string name="input_cannot_empty" translatable="false">input cannot be empty</string>
+    <string name="welcome" translatable="false">Welcome, </string>
+    <string name="register_success" translatable="false">Pendaftaran berhasil</string>
+    <string name="detail_film_scroll">detail film scroll</string>
+    <string name="img_film_detail">img film detail</string>
+    <string name="user_score">User Score</string>
+    <string name="btn_homepage">btn homepage</string>
+    <string name="status">Status</string>
+    <string name="original_language">Original Language</string>
+    <string name="budget">Budget</string>
+    <string name="revenue">Revenue</string>
+    <string name="image_backdrop">image backdrop</string>
+    <string name="btn_profile">btn profile</string>
+    <string name="home">Home</string>
+    <string name="btn_category">btn category</string>
+    <string name="welcome_sign_in">Welcome,\nSign in to continue</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="btn_register_account">Don\'t have an account yet?</string>
+    <string name="profile">Profile</string>
+    <string name="img_avatar">img avatar</string>
+    <string name="update">Update</string>
+    <string name="logout">Sign out</string>
+    <string name="welcom_register">Welcome,\nRegister to continue</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="enter_fullname">Enter Full Name</string>
+    <string name="mm_dd_yyyy">mm/dd/yyyy</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="image_list_film">image list film</string>
+    <string name="homepage_information">Homepage is not work</string>
+    <string name="favorite">Favorite</string>
+    <string name="btn_favorite">btn favorite</string>
+</resources>

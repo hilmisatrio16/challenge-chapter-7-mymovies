@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="username"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.HomeFragment"
+        android:background="@color/gray">
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/blue_full_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <RelativeLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin= "8dp">
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/welcome +' '+ username}"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"
+                    android:maxLength="30"
+                    tools:ignore="RelativeOverlap" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/pro"
+                        android:background="@color/blue_full_dark"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/btn_favorite"
+                        app:tint="@color/blue_300"
+                        tools:ignore="ObsoleteLayoutParam" />
+                    <ImageButton
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_favorite"
+                        android:background="@color/blue_full_dark"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/btn_favorite"
+                        app:tint="@color/blue_300"
+                        tools:ignore="ObsoleteLayoutParam" />
+                    <ImageButton
+                        android:id="@+id/btnProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_person"
+                        android:background="@color/blue_full_dark"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/btn_profile"
+                        app:tint="@color/blue_300"
+                        tools:ignore="ObsoleteLayoutParam" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_margin="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/titleFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/home"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp" />
+                <ImageButton
+                    android:id="@+id/btnCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_category"
+                    android:background="@color/blue_full_dark"
+                    android:contentDescription="@string/btn_category"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"
+                    app:tint="@color/gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/headerLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/item_film"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

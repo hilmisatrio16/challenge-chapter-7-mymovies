@@ -20,6 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@Suppress("unused", "unused")
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
 
@@ -74,38 +75,45 @@ class LoginFragment : Fragment() {
             }
         }
     }
-    private fun loginAccount() {
+     private fun loginAccount() {
         val email = binding.inputEmail.text.toString()
         val password = binding.inputPassword.text.toString()
 
         if(email.isNotEmpty() && password.isNotEmpty()){
-                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                    if(it.isSuccessful){
-
-                        lifecycleScope.launch {
-                            dataStoreUser.saveDataUser("active", email)
-                        }
-                        Toast.makeText(context, R.string.login_success, Toast.LENGTH_SHORT).show()
-
-                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-                    }else{
-                        if(it.exception is FirebaseAuthInvalidUserException){
-                            when((it.exception as FirebaseAuthInvalidUserException).errorCode){
-                                "ERROR_USER_NOT_FOUND" -> Toast.makeText(context,"user not found", Toast.LENGTH_SHORT).show()
-                                "ERROR_USER_DISABLED" -> Toast.makeText(context, "user has been disabled", Toast.LENGTH_SHORT).show()
-                                "ERROR_INVALID_USER_TOKEN" -> Toast.makeText(context, "user has been disabled", Toast.LENGTH_SHORT).show()
-                                else -> Toast.makeText(context, "email or password is failed", Toast.LENGTH_SHORT).show()
-                            }
-                        }else{
-                            Toast.makeText(context, "Login failed", Toast.LENGTH_SHORT).show()
-                        }
-                        //Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                    }
-                }
+            signInFirebase(email, password)
         }else{
             Toast.makeText(context, R.string.input_cannot_empty, Toast.LENGTH_SHORT).show()
         }
     }
+
+
+    @Suppress("all")
+    private fun signInFirebase(email : String, password : String){
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+            if(it.isSuccessful){
+
+                lifecycleScope.launch {
+                    dataStoreUser.saveDataUser("active", email)
+                }
+                Toast.makeText(context, R.string.login_success, Toast.LENGTH_SHORT).show()
+
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            }else{
+                if(it.exception is FirebaseAuthInvalidUserException){
+                    when((it.exception as FirebaseAuthInvalidUserException).errorCode){
+                        "ERROR_USER_NOT_FOUND" -> Toast.makeText(context,"user not found", Toast.LENGTH_SHORT).show()
+                        "ERROR_USER_DISABLED" -> Toast.makeText(context, "user has been disabled", Toast.LENGTH_SHORT).show()
+                        "ERROR_INVALID_USER_TOKEN" -> Toast.makeText(context, "user has been disabled", Toast.LENGTH_SHORT).show()
+                        else -> Toast.makeText(context, "email or password is failed", Toast.LENGTH_SHORT).show()
+                    }
+                }else{
+                    Toast.makeText(context, "Login failed", Toast.LENGTH_SHORT).show()
+                }
+                //Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 
 
 }

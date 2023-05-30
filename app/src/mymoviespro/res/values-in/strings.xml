@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Challenge Chapter 5</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="background_wave">background_wave</string>
+    <string name="img_login">img login</string>
+    <string name="login">Masuk</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="overview">Ringkasan</string>
+    <string name="password_not_match">kata sandi tidak cocok</string>
+    <string name="input_cannot_empty">input tidak boleh kosong</string>
+    <string name="welcome">Selamat datang, </string>
+    <string name="register_success">Daftar berhasil</string>
+    <string name="detail_film_scroll">detail film scroll</string>
+    <string name="img_film_detail">img film detail</string>
+    <string name="user_score">Skor pengguna</string>
+    <string name="btn_homepage">btn homepage</string>
+    <string name="status">Status</string>
+    <string name="original_language">Bahasa Asli</string>
+    <string name="budget">Anggaran</string>
+    <string name="revenue">Pendapatan</string>
+    <string name="image_backdrop">image backdrop</string>
+    <string name="btn_profile">btn profile</string>
+    <string name="home">Home</string>
+    <string name="btn_category">btn kategori</string>
+    <string name="welcome_sign_in">Welcome,\nSign in to continue</string>
+    <string name="enter_email">Masukkan Email</string>
+    <string name="enter_password">Masukkan Password</string>
+    <string name="sign_in">Masuk</string>
+    <string name="btn_register_account">Apakah anda belum memiliki akun?</string>
+    <string name="profile">Profil</string>
+    <string name="img_avatar">img avatar</string>
+    <string name="update">Perbarui</string>
+    <string name="logout">Keluar</string>
+    <string name="welcom_register">Selamat Datang,\Daftar untuk melanjutkan</string>
+    <string name="enter_username">Masukkan Username</string>
+    <string name="enter_confirm_password">Masukkan Konfirmasi Password</string>
+    <string name="sign_up">Daftar</string>
+    <string name="have_account">Apakah sudah memiliki akun?</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="enter_fullname">Enter Full Name</string>
+    <string name="mm_dd_yyyy">mm/dd/yyyy</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="image_list_film">image list film</string>
+    <string name="homepage_information">Homepage sedang tidak aktif</string>
+    <string name="login_success">Login berhasil</string>
+    <string name="favorite">Favorite</string>
+    <string name="btn_favorite">btn favorite</string>
+
+</resources>

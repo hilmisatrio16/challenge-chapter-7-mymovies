@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Challenge Chapter 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="background_wave" translatable="false">background_wave</string>
+    <string name="img_login" translatable="false">img login</string>
+    <string name="login" translatable="false">acceso</string>
+    <string name="lorem_ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="overview" translatable="false">Descripción general</string>
+    <string name="password_not_match" translatable="false">La contraseña no coincide</string>
+    <string name="input_cannot_empty" translatable="false">input cannot be empty</string>
+    <string name="welcome" translatable="false">Bienvenido, </string>
+    <string name="register_success" translatable="false">Registro exitoso</string>
+    <string name="detail_film_scroll">Desplazamiento de los detalles de la película</string>
+    <string name="img_film_detail">img detalles de la película</string>
+    <string name="user_score">Puntuación del usuario</string>
+    <string name="btn_homepage">página de inicio del botón</string>
+    <string name="status">estado</string>
+    <string name="original_language">Idioma original</string>
+    <string name="budget">Presupuesto</string>
+    <string name="revenue">Ganancia</string>
+    <string name="image_backdrop">fondo de imagen</string>
+    <string name="btn_profile">perfil de botón</string>
+    <string name="home">Hogar</string>
+    <string name="btn_category">categoría btn</string>
+    <string name="welcome_sign_in">Bienvenido,\nInicia sesión para continuar</string>
+    <string name="enter_email">Ingrese correo electrónico</string>
+    <string name="enter_password">Introducir la contraseña</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="btn_register_account">Aún no tienes una cuenta?</string>
+    <string name="profile">Perfil</string>
+    <string name="img_avatar">img avatar</string>
+    <string name="update">Actualizar</string>
+    <string name="logout">desconectar</string>
+    <string name="welcom_register">Bienvenido,\nRegístrese para continuar</string>
+    <string name="enter_username">Introduzca su nombre de usuario</string>
+    <string name="enter_confirm_password">Ingresar Confirmar contraseña</string>
+    <string name="sign_up">Inscribirse</string>
+    <string name="have_account">Ya tienes una cuenta?</string>
+    <string name="update_profile">Actualización del perfil</string>
+    <string name="enter_fullname">Ingrese el nombre completo</string>
+    <string name="mm_dd_yyyy">mm/dd/yyyy</string>
+    <string name="enter_address">Ingresa la direccion</string>
+    <string name="image_list_film">lista de imágenes película</string>
+    <string name="homepage_information">La página de inicio no funciona</string>
+    <string name="login_success">iniciado sesión con éxito</string>
+    <string name="favorite">Favorite</string>
+    <string name="btn_favorite">btn favorite</string>
+</resources>

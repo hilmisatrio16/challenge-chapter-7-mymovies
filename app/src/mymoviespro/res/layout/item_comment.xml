@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="comment"
+            type="com.example.challengechapter5.model.DataComment" />
+    </data>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{comment.username}"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/blue_full_dark"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{comment.comment}"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/navy_blue"
+                    android:textSize="12sp"
+                    android:layout_marginTop="1dp"/>
+        </LinearLayout>
+</layout>
