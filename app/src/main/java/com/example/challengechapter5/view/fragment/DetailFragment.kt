@@ -164,6 +164,8 @@ class DetailFragment : Fragment() {
             }.addOnFailureListener {
                 Toast.makeText(context,"comment failed", Toast.LENGTH_SHORT).show()
             }
+        }else{
+            Toast.makeText(context,"field not empty!!", Toast.LENGTH_SHORT).show()
         }
     }
 

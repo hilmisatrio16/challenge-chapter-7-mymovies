@@ -220,10 +220,12 @@
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp">
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutSendComments"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="InconsistentLayout">
                         <EditText
                             android:id="@+id/etComment"
                             android:layout_width="0dp"
